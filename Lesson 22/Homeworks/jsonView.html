@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Feedback</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        />
+
+        <style>
+            body {
+                background: #eeebdd;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .bracket {
+                font-weight: bold;
+            }
+        </style>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-4 text-left json-wrapper">{JSON}</div>
+                <div class="w-100"></div>
+                <div class="col-4 text-center"><a href="/">Feedback</a></div>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener("load", () => {
+                const jsonWrapper = document.querySelector(".json-wrapper");
+                let jsonText = jsonWrapper.innerText;
+
+                const patterns = {
+                    openBracket: /[\{]/g,
+                    closeBracket: /[\}]/g,
+                    comma: /",/g,
+                };
+
+                jsonText = jsonText
+                    .replace(
+                        patterns.openBracket,
+                        '<span class="bracket">&#123;</span><br>'
+                    )
+                    .replace(
+                        patterns.closeBracket,
+                        '<br><span class="bracket">&#125;</span>'
+                    )
+                    .replace(
+                        patterns.comma,
+                        '"<span class="comma">,</span><br>'
+                    );
+
+                jsonWrapper.innerHTML = jsonText;
+            });
+        </script>
+    </body>
+</html>

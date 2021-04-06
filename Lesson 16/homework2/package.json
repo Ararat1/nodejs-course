@@ -1,0 +1,15 @@
+{
+    "name": "homework-2",
+    "version": "1.0.0",
+    "description": "Sunny School Node.JS course Lesson 16, homework 2",
+    "main": "index.js",
+    "scripts": {
+        "start": "node homework2.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ararat Matinyan matinyan_0@mail.ru",
+    "license": "ISC",
+    "dependencies": {
+        "random": "^3.0.3"
+    }
+}

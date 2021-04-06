@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        />
+
+        <style>
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            button {
+                margin-top: 16px;
+            }
+        </style>
+
+        <title>Set card image</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem">
+                        <img
+                            class="card-img-top"
+                            src="https://via.placeholder.com/150x100"
+                            id="avatar"
+                            alt="Card image cap"
+                        />
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Your name</h5>
+                            <div class="form-group">
+                                <form
+                                    method="POST"
+                                    enctype="multipart/form-data"
+                                >
+                                    <input
+                                        type="file"
+                                        name="avatar"
+                                        class="form-control-file"
+                                    />
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary set-image"
+                                    >
+                                        Set Avatar
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const form = document.querySelector("form");
+
+            // This function is from stackoverflow.com
+            const toBase64 = (arr) => {
+                return btoa(
+                    arr.reduce(
+                        (data, byte) => data + String.fromCharCode(byte),
+                        ""
+                    )
+                );
+            };
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                let data = new FormData(e.target);
+
+                fetch("http://localhost:8080", {
+                    Authorization:
+                        "Bearer " + localStorage.getItem("accessToken"),
+                    method: "POST",
+                    headers: {
+                        Accept: "apllication/json",
+                    },
+                    body: data,
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        let img = document.querySelector("#avatar");
+
+                        img.src =
+                            "data:image/jpeg;base64," + toBase64(data.img.data);
+                    })
+                    .finally(form.reset());
+            });
+        </script>
+    </body>
+</html>

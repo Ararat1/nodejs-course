@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Feedback</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        />
+
+        <style>
+            body {
+                background: #eeebdd;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .form-wrapper {
+                background: #fff;
+                border-radius: 5px 5px 5px 5px;
+            }
+
+            h2 {
+                margin-top: 18px;
+            }
+
+            form {
+                margin-bottom: 18px;
+            }
+        </style>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8 form-wrapper">
+                    <h2 class="text-center">Feedback</h2>
+                    <form method="GET">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                id="name"
+                                autocomplete="off"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea
+                                class="form-control"
+                                name="message"
+                                id="message"
+                                rows="7"
+                                autocomplete="off"
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
