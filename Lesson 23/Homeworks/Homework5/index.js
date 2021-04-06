@@ -18,9 +18,9 @@ const server = http.createServer((req, res) => {
             let filepath = `${__dirname}/upload/${filename}`
 
             try {
-                accessSync("./upload");
+                accessSync("./upload")
             } catch (e) {
-                mkdirSync("./upload");
+                mkdirSync("./upload")
             }
 
             mv(avatar.path, filepath, () => {
@@ -28,7 +28,7 @@ const server = http.createServer((req, res) => {
                     .resize(150, 100)
                     .jpeg({ mozjpeg: true })
                     .toFile(`./upload/_${filename}`)
-                    .then(() => {
+                    .then((data) => {
                         let image = readFileSync(`./upload/_${filename}`)
 
                         res.writeHead(200, { "Content-Type": "image/jpeg" })
@@ -36,7 +36,9 @@ const server = http.createServer((req, res) => {
                     })
             })
         })
-    } else {
+    }
+
+    else {
         res.writeHead(200, { "Content-Type": "text/html; charset=utf-8;" })
 
         let htmlStream = createReadStream("./Views/index.html")
