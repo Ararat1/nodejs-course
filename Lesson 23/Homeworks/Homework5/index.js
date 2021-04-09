@@ -28,7 +28,7 @@ const server = http.createServer((req, res) => {
                     .resize(150, 100)
                     .jpeg({ mozjpeg: true })
                     .toFile(`./upload/_${filename}`)
-                    .then((data) => {
+                    .then(() => {
                         let image = readFileSync(`./upload/_${filename}`)
 
                         res.writeHead(200, { "Content-Type": "image/jpeg" })

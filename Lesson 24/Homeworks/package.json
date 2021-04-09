@@ -1,0 +1,17 @@
+{
+    "name": "homeworks",
+    "version": "1.0.0",
+    "description": "",
+    "main": "homework1.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "formidable": "^1.2.2",
+        "nodemailer": "^6.5.0",
+        "validator": "^13.5.2"
+    }
+}
