@@ -24,6 +24,8 @@ const server = http.createServer((req, res) => {
             // check out email address
             // if email is valid => send sunny.jpg to email
             // otherwise send back an empty form and message that email was invalid
+            if (err) throw err
+
             if (isEmail(email)) {
                 const config = {
                     service: "gmail",
