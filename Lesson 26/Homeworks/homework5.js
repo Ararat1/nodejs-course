@@ -28,8 +28,6 @@ con.connect((err) => {
         if (err) throw err
         console.log("tableArticles is created")
     })
-
-
 })
 
 // view
@@ -84,10 +82,11 @@ const server = http.createServer((req, res) => {
                 refreshPage(res)
             })
         })
-    } else {
-        refreshPage(res)
 
+        return
     }
+
+    refreshPage(res)
 })
 
 server.listen(8080)
