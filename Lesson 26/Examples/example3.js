@@ -1,3 +1,4 @@
+// type "npm run example3" to start executing this program
 import mysql from "mysql"
 import { readFile } from "fs"
 import http from "http"

@@ -1,3 +1,4 @@
+// type "npm run example4" to start executing this program
 import http from "http"
 import mysql from "mysql"
 import { IncomingForm } from "formidable"

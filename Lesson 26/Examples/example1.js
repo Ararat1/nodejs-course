@@ -1,3 +1,4 @@
+// type "npm run example1" to start executing this program
 import mysql from "mysql"
 
 // create connection to database
