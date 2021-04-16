@@ -52,7 +52,7 @@ const server = http.createServer((request, response) => {
 
                 article.save((err, result) => {
                     if (err) {
-                        console.log("Article saving error: ", err.message);
+                        response.end(err.message);
                         return;
                     }
 
