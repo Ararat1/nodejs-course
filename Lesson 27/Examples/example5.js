@@ -56,7 +56,7 @@ const server = http.createServer((request, response) => {
                         return;
                     }
 
-                    response.end("New article is saved to database..!")
+                    response.end(`${result}`);
                 });
             });
         });
