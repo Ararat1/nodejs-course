@@ -1,0 +1,26 @@
+{
+    "name": "examples",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "creator": "babel-node creator.js",
+        "example1": "babel-node example1.js",
+        "example2": "babel-node example2.js",
+        "example3": "babel-node example3.js",
+        "example4": "babel-node example4.js",
+        "example5": "babel-node example5.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@babel/cli": "^7.13.14",
+        "@babel/core": "^7.13.15",
+        "@babel/node": "^7.13.13",
+        "@babel/preset-env": "^7.13.15",
+        "formidable": "^1.2.2",
+        "mongoose": "^5.12.4"
+    }
+}
