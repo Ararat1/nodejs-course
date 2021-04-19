@@ -1,0 +1,26 @@
+{
+  "name": "homeworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "creator":"babel-node creator.js",
+    "homework1":"babel-node homework1.js",
+    "homework2":"babel-node homework2.js",
+    "homework3":"babel-node homework3.js",
+    "homework4":"babel-node homework4.js",
+    "homework5":"babel-node homework5.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.15",
+    "formidable": "^1.2.2",
+    "mongoose": "^5.12.4"
+  }
+}
