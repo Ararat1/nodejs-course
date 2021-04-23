@@ -1,0 +1,1 @@
+// type "npm run homework6" to start executing this program
