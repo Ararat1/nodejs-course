@@ -1,5 +1,4 @@
 // type "npm run example4" to start executing this program
-// type "npm run example3" to start executing this program
 import http from "http";
 import mongoose from "mongoose";
 
