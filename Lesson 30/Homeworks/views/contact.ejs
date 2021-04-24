@@ -1,0 +1,53 @@
+<%- include("components/header") %>
+
+<main>
+    <div class="container image">
+        <div class="row text-center">
+            <div class="col-12">
+                <form action="/contact" method="POST">
+                    <div class="form-floating mb-3">
+                        <input
+                            type="text"
+                            name="name"
+                            class="form-control"
+                            placeholder="Name"
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                            type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="@ Email"
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                            type="text"
+                            name="title"
+                            class="form-control"
+                            placeholder="Title"
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="form-floating">
+                        <textarea
+                            class="form-control"
+                            name="message"
+                            placeholder="message"
+                            id="message"
+                            style="height: 150px"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary m-2">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include("components/footer") %>

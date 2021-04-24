@@ -1,0 +1,16 @@
+header {
+    margin-bottom: 16px;
+}
+
+footer {
+    margin-top: 16px;
+}
+
+.navbar-brand img {
+    width: 42px;
+    border-radius: 200px 200px 200px 200px;
+}
+
+.image img {
+    max-width: 50%;
+}
