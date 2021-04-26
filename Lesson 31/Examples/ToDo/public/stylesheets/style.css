@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header nav {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.form-wrapper {
+    margin-top: 24px;
+}
+
+.form-wrapper::after {
+    content: "";
+    display: block;
+    border: 1px solid lightgrey;
+    width: 60%;
+    margin: 16px auto;
+}
+
+section#tasks .card {
+    margin-top: 12px;
+}
+
+section#tasks .card-body {
+    padding: 14px;
+}
+
+section#tasks .card-title {
+    margin: 0;
+}
+
+h5.card-title:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+}
